@@ -1,62 +1,44 @@
-import { Input, Typography } from 'antd';
+import React, {useState} from 'react'
+import { useFetchPokemon } from './hooks/useFetchPokemon';
+import SearchSection from './components/SearchSection/SearchSection';
+import PokemonName from './components/PokemonName/PokemonName';
+import Sprite from './components/sprite/Sprite';
+import Attributes from './components/Attributes/attributes';
+import Stats from './components/stats/stats';
 import './App.css'
-const { Search } = Input;
 
 function App() {
+
+  const [pokemonName, setPokemonName] = useState('bulbasaur')
+  
+  const { data, isLoading, error } = useFetchPokemon(pokemonName)
   
   return (
-    <div className='app-container'>
-      <div className='app-section'> 
-        <div className="searchbar-container">
-          <Search placeholder="input search loading default" allowClear/>
-        </div>
-      </div>
-      <div className='app-section'> 
-        <div className="sprite-container">
-          <img src="" alt="pokemon sprite" className="sprite" />
-        </div>
-        <div className="name-container">
-          <Typography.Title level={2}>
-            BULBASAUR
-          </Typography.Title>
-        </div>
-      </div>
-      <div className='app-section attribute-section'> 
-          <div className="attribute-name">
-            <Typography.Text>ID</Typography.Text>
+    <main className='app-container'>
+
+      {isLoading && (
+        <h1>Loading...</h1>
+      )}
+      {error && (
+      <p>{error}</p>
+    )}
+      {data && (
+        <>
+          <div className="app-section">
+            <SearchSection setPokemonName={setPokemonName} />
+            <PokemonName name={ pokemonName }/>
           </div>
-          <div className="attribute-content">
-            <Typography.Text>#1</Typography.Text>
+          <Sprite data={ data } /> 
+          <div className='app-section attribute-section'> 
+            <Attributes data={ data }/>
           </div>
-          <div className="attribute-name">
-            <Typography.Text>Height</Typography.Text>
+          <div className='app-section'> 
+            <Stats data= { data }/>
           </div>
-          <div className="attribute-content">
-            <Typography.Text>0.7m ( 2"4')</Typography.Text>
-          </div>
-          <div className="attribute-name">
-            <Typography.Text>Weight</Typography.Text>
-          </div>
-          <div className="attribute-content">
-            <Typography.Text>6.9kg</Typography.Text>
-          </div>
-          <div className="attribute-name">
-            <Typography.Text>Abilities</Typography.Text>
-          </div>
-          <div className="attribute-content">
-            <Typography.Text>OVERGROW CHLOROPHYLL</Typography.Text>
-          </div>
-          <div className="attribute-name">
-            <Typography.Text>Type</Typography.Text>
-          </div>
-          <div className="attribute-content">
-            <Typography.Text>Grass Poison</Typography.Text>
-          </div>
-      </div>
-      <div className='app-section stats'> 
-        STATS
-      </div>
-    </div>
+        </>
+      )
+      }
+</main>
   )
 }
 
