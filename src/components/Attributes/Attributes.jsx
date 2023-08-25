@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { Tag } from 'antd';
 import { Typography } from 'antd';
+import { types } from '../../../appConfig';
+import './Attributes.css'
 
 let shownAbilities = []
 let shownTypes = []
 let uniqueAbilities = []
 let uniqueTypes = []
 
-function Attributes({data}) {
+function Attributes({data, isLoading, error}) {
 
     data.abilities.map((element) => {
-      shownAbilities.push(<Tag key={element.ability.name}>{element.ability.name}</Tag>)
+      shownAbilities.push(<Tag key={element.ability.name}>{element.ability.name} </Tag>)
       })
-    // uniqueAbilities = [... new Set(shownAbilities)]
     data.types.map((element) => {
-      shownTypes.push(<Tag key={element.type.name}>{element.type.name}</Tag>)
+      let type = element.type.name
+      shownTypes.push(<Tag key={element.type.name}  className='type-tag'>{element.type.name}<span><img src={types[type].icon} className='type-icon'></img></span></Tag>)
       })
-    // uniqueTypes = [... new Set(shownTypes)]
+
+
 
 
   return (

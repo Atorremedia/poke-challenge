@@ -3,8 +3,6 @@ import './Sprite.css'
 
 function Sprite({data}) {
 
-  console.log(data)
-
   return (
     <>
           <div className="sprite-container">

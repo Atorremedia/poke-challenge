@@ -1,17 +1,25 @@
 import React from 'react'
-import { Typography } from 'antd';
+import { Typography, Spin } from 'antd';
 
-function PokemonName ({name}) {
+function PokemonName ({name, isLoading, error}) {
 
   return (
     <div className='pokemon-name'>
-      {name && (
+      {error && (
+        <p>{error}</p>
+      )}
         <div className="name-container">
             <Typography.Title>
-                {name.toUpperCase()} 
+              {isLoading 
+              ? (
+                <Spin />
+              )
+              :name && (
+                name.toUpperCase()
+              )
+              } 
             </Typography.Title>
         </div>
-        )}
     </div>
   )
 }

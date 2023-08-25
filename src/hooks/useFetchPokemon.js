@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react"
+import { API_URL } from "../../appConfig"
 
 export function useFetchPokemon (pokemonName) {
 
@@ -8,7 +9,7 @@ export function useFetchPokemon (pokemonName) {
 
     useEffect(() => {
     setIsLoading(true)
-      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+      fetch(API_URL + pokemonName)
           .then(res => res.json())
           .then(data => setData(data))
           .catch((error) => setError(error))

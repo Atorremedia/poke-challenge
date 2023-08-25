@@ -1,0 +1,8 @@
+.type-tag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.type-icon {
+    width: 1.2rem;
+}

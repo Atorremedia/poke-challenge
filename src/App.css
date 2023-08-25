@@ -1,6 +1,6 @@
 .app-container {
   max-width: 1200px;
-  margin: 150px auto;
+  margin: 5rem auto;
   display: grid;
   /* grid-template-columns: minmax(20rem, 1fr) repeat(2, minmax(20rem, 60rem)) minmax(20rem, 60rem); */
   grid-template-columns: repeat(2, 1fr);
