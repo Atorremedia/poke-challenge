@@ -1,7 +1,7 @@
 # Pokémon stats web app
 
 ## Product
-The product is a web application that lets users search a Pokémon species in the PokéAPI and shows back it data. The interface shows the species name, a front image, various attributes and a barchart with the species' stats.
+The product is a web application that lets users search a Pokémon species in the PokéAPI and shows back it data. The interface renders the species name, a front image, various attributes and a barchart with the species' stats.
 
 ## Screenshots
 
