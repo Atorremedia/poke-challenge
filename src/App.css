@@ -1,15 +1,13 @@
 .app-container {
-  max-width: 1200px;
-  margin: 5rem auto;
+  max-width: 1000px;
+  margin: 1rem auto;
   display: grid;
-  /* grid-template-columns: minmax(20rem, 1fr) repeat(2, minmax(20rem, 60rem)) minmax(20rem, 60rem); */
   grid-template-columns: repeat(2, 1fr);
   gap:.2rem
 }
 .app-section {
   padding: 1rem;
   min-width: 30rem;
-  min-height: 10rem;
 }
 .searchbar-container {
   width: 20rem;
@@ -18,11 +16,30 @@
 .name-container {
   text-align: center;
 }
+.sprite-section {
+  height: 15rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border: 1px solid black;
+  border-radius: 50px;
+}
 .attribute-section {
+  height: 12rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 1rem;
+  column-gap: 1rem;
+  font-size: 1.5rem;
 }
-.attribute-name {
-  text-align: right;
+
+@media (max-width: 1024px){
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+}
+
+
