@@ -5,7 +5,7 @@ import Sprite from './components/sprite/Sprite';
 import Attributes from './components/Attributes/attributes';
 import Stats from './components/stats/stats';
 import './App.css'
-import { API_URL, defaultPokemon } from '../appConfig';
+import { API_URL, defaultPokemon } from './config/appConfig';
 
 function App() {
 

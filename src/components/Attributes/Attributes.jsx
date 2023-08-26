@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Tag } from 'antd';
 import { Typography } from 'antd';
-import { types } from '../../../appConfig';
+import { types } from '../../config/appConfig';
 import './Attributes.css'
 
 
@@ -22,43 +22,41 @@ function Attributes({data}) {
 
   return (
     <div className='app-section attribute-section'>
-{
-  data && (
-    <>
-      <div className="attribute-name">
-        <Typography.Text>ID</Typography.Text>
-      </div>
-      <div className="attribute-value">
-        <Typography.Text>#{data.id}</Typography.Text>
-      </div>
-      <div className="attribute-name">
-        <Typography.Text>Height</Typography.Text>
-      </div>
-      <div className="attribute-value">
-        <Typography.Text>{data.height/10} m ( {Math.round(data.height/3.28084)}"{Math.round(data.height%3.28084*12)}' )</Typography.Text>
-      </div>
-      <div className="attribute-name">
-        <Typography.Text>Weight</Typography.Text>
-      </div>
-      <div className="attribute-value">
-        <Typography.Text>{data.weight/10} kg ( {(data.weight*0.220462).toFixed(1)} lbs )</Typography.Text>
-      </div>
-      <div className="attribute-name">
-        <Typography.Text>Abilities</Typography.Text>
-      </div>
-      <div className="attribute-value">
-          {shownAbilities}
-      </div>
-      <div className="attribute-name">
-        <Typography.Text>Type</Typography.Text>
-      </div>
-      <div className="attribute-value">
-        {shownTypes}
-      </div>
-      </>
-  )
-}
-      </div>
+      { data && (
+        <>
+          <div className="attribute-name">
+            <Typography.Text>ID</Typography.Text>
+          </div>
+          <div className="attribute-value">
+            <Typography.Text>#{data.id}</Typography.Text>
+          </div>
+          <div className="attribute-name">
+            <Typography.Text>Height</Typography.Text>
+          </div>
+          <div className="attribute-value">
+            <Typography.Text>{data.height/10} m ( {Math.round(data.height/3.28084)}"{Math.round(data.height%3.28084*12)}' )</Typography.Text>
+          </div>
+          <div className="attribute-name">
+            <Typography.Text>Weight</Typography.Text>
+          </div>
+          <div className="attribute-value">
+            <Typography.Text>{data.weight/10} kg ( {(data.weight*0.220462).toFixed(1)} lbs )</Typography.Text>
+          </div>
+          <div className="attribute-name">
+            <Typography.Text>Abilities</Typography.Text>
+          </div>
+          <div className="attribute-value">
+              {shownAbilities}
+          </div>
+          <div className="attribute-name">
+            <Typography.Text>Type</Typography.Text>
+          </div>
+          <div className="attribute-value">
+            {shownTypes}
+          </div>
+        </>
+      )}
+    </div>
   )
 }
 

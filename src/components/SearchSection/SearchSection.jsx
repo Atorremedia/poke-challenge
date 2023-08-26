@@ -18,18 +18,18 @@ function SearchSection({setPokemonName, error}) {
           Choose your Pokémon
         </Typography.Title>
         <Input.Search
-        placeholder="your favorite Pokémon"
-        onSearch={onSearch}
-        enterButton
-        ref={inputRef}
+          placeholder="your favorite Pokémon"
+          onSearch={onSearch}
+          enterButton
+          ref={inputRef}
         />
         <div className="message-container">
           {error &&
             <Alert
-            message="error"
-            description="Pokémon not found!"
-            type="error"
-            showIcon
+              message="error"
+              description="Pokémon not found!"
+              type="error"
+              showIcon
             />
           }
       </div>

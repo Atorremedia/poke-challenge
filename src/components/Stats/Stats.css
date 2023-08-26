@@ -3,6 +3,6 @@
     height: 20rem;
     padding: .5rem;
 }
-svg rect {
+svg g rect {
     fill:rgb(100, 200, 180);
 }

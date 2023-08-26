@@ -1,5 +1,5 @@
+import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
-import { useEffect, useState } from "react"
 import './Stats.css'
 
 function Stats({ data, isLoading, error }) {
@@ -17,9 +17,9 @@ function Stats({ data, isLoading, error }) {
   }
 
   return (
-      <div className="chartContainer">
-        {!isLoading && (
-          <ResponsiveBar
+    <div className="chartContainer">
+      {!isLoading && (
+        <ResponsiveBar
           data={shownStats}
           keys={["value"]}
           indexBy="name"
@@ -36,9 +36,8 @@ function Stats({ data, isLoading, error }) {
             legendOffset: 32,
           }}
         />
-        )}
-      </div>
-
+      )}
+    </div>
   )
 }
 
