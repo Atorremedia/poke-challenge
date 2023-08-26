@@ -1,11 +1,9 @@
-
 .sprite-container {
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 .sprite {
-    width: 20rem;
+    width: 15rem;
 }

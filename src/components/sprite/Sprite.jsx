@@ -7,7 +7,7 @@ function Sprite({data}) {
     <>
           <div className="sprite-container">
       {data && (
-            <img src={ data.sprites.front_default } alt="pokemon sprite" className="sprite" />
+            <img src={ data.sprites.front_default } alt={`Sprite image of ${data.species.name}`} className="sprite" />
             )
             }
           </div>
