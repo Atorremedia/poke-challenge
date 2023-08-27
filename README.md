@@ -3,7 +3,7 @@
 ## Product
 The product is a web application that lets users search a Pokémon species in the PokéAPI and shows back its data. The interface renders the species name, a front image, various attributes and a barchart with the species' stats.
 
-It can be visited here[here](https:pokestats.augustolle.com).
+It can be visited [here](https:pokestats.augustolle.com).
 
 ## Screenshots
 
