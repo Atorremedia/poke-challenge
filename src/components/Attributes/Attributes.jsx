@@ -4,6 +4,9 @@ import { Typography } from 'antd';
 import { types } from '../../config/appConfig';
 import './Attributes.css'
 
+const feetInMeter = 3.28084
+const inchesInFeet = 12
+const lbsinkg = 0.220462
 
 function Attributes({data}) {
 
@@ -34,13 +37,13 @@ function Attributes({data}) {
             <Typography.Text>Height</Typography.Text>
           </div>
           <div className="attribute-value">
-            <Typography.Text>{data.height/10} m ( {Math.round(data.height/3.28084)}"{Math.round(data.height%3.28084*12)}' )</Typography.Text>
+            <Typography.Text>{data.height/10} m ( {Math.round(data.height/feetInMeter)}"{Math.round(data.height%feetInMeter*inchesInFeet)}' )</Typography.Text>
           </div>
           <div className="attribute-name">
             <Typography.Text>Weight</Typography.Text>
           </div>
           <div className="attribute-value">
-            <Typography.Text>{data.weight/10} kg ( {(data.weight*0.220462).toFixed(1)} lbs )</Typography.Text>
+            <Typography.Text>{data.weight/10} kg ( {(data.weight*lbsinkg).toFixed(1)} lbs )</Typography.Text>
           </div>
           <div className="attribute-name">
             <Typography.Text>Abilities</Typography.Text>
