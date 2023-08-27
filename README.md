@@ -23,6 +23,7 @@ Fetch is made from App. jsx component, using default prompt (on load) or the inp
 ![Folder structure](./readme_img/folders.png)
 
 Each react component other than App.jsx (in root) is located in a separate folder with its CSS styles file.
+There is a config folder with an appConfig, containing the API endpoint URL used, the default Pokémon species found and a dictionaey to check colors for type tags.
 
 ## Modules
 
