@@ -10,7 +10,7 @@ The product is a web application that lets users search a Pokémon species in th
 ![Data trim case](./readme_img/pokestats_screenshot_03.png)
 
 ## Technologies
-[React](https:react.dev), [Vite](https:vitejs.dev), [Ant Design](https:ant.design), Nivo[Nivo](https:nivo.rocks), npm 
+[React](https:react.dev), [Vite](https:vitejs.dev), [Ant Design](https:ant.design), [Nivo](https:nivo.rocks), npm 
 
 ## Architecture
 ![Folder structure](./readme_img/architecture.png)
