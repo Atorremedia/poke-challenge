@@ -1,9 +1,9 @@
 # Pokémon stats web app
 
 ## Product
-The product is a web application that lets users search a Pokémon species in the PokéAPI and shows back it data. The interface renders the species name, a front image, various attributes and a barchart with the species' stats.
+The product is a web application that lets users search a Pokémon species in the PokéAPI and shows back its data. The interface renders the species name, a front image, various attributes and a barchart with the species' stats.
 
-It can be visited here[here](https:pokestats.augustolle.com).
+It can be visited [here](https:pokestats.augustolle.com).
 
 ## Screenshots
 
@@ -23,6 +23,7 @@ Fetch is made from App. jsx component, using default prompt (on load) or the inp
 ![Folder structure](./readme_img/folders.png)
 
 Each react component other than App.jsx (in root) is located in a separate folder with its CSS styles file.
+There is a config folder with an appConfig, containing the API endpoint URL used, the default Pokémon species found and a dictionaey to check colors for type tags.
 
 ## Modules
 
