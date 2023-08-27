@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import SearchSection from './components/SearchSection/SearchSection';
 import PokemonName from './components/PokemonName/PokemonName';
-import Sprite from './components/sprite/Sprite';
+import Sprite from './components/Sprite/Sprite';
 import Attributes from './components/Attributes/attributes';
 import Stats from './components/stats/stats';
 import './App.css'
